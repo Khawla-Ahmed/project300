@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html"><img src="./images/logo.png" alt="Metropolitan University Logo"></a>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="leaveform.html">Leave Request</a>
+    
+      <button class="btnLogin-popup" onclick="navigateToLogin()">Logout</button>
+    </div>
+  </nav>
+
+  <section class="leave">
+    
+    <div id="leave-request" class="form-container">
+      
+      <form id="leave-request-form" action="http://localhost/p 300/submit_request.php" method="post">
+        <h2>Leave Request Form</h2>
+      
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="leave-type">Leave Type:</label>
+          <select id="leave-type" name="leave_type">
+            <option value="sick">Sick Leave</option>
+            <option value="vacation">Vacation Leave</option>
+            <option value="personal">Personal Leave</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" name="start_date" required>
+        </div>
+        <div class="form-group">
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" name="end_date" required>
+        </div>
+      
+        <button type="submit">Submit Request</button>
+      </form>
+      
+    </div>
+  </section>
+
+  <script>
+    function navigateToLogin() {
+     window.location.href = "login.html";
+   }
+   
+   // Event listener for the register link
+   document.getElementById("login-link").addEventListener("click", function(event) {
+     event.preventDefault(); // Prevent default link behavior
+     navigateToLogin(); // Call the navigation function
+   });
+
+
+   
+   </script>
+</body>
+</html>

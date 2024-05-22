@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty & Staff Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="./images/logo.png" alt="Metropolitan University Logo"></a>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="leaveform.html">Leave Request</a>
+      <button class="btnLogin-popup" onclick="navigateToLogin()">Logout</button>
+     </div>
+    </nav>
+
+    <!--Faculty and Staff Directory-->
+    <section>
+      <div id="search-box">
+        <h2>Faculty/Staff Directory</h2>
+        <form id="search-form" action="http://localhost/p 300/infodirectory.php" method="POST">
+          <div class="search-field">
+            <label for="search-name">Name</label>
+            <input type="text" id="search-name" name="search-name" placeholder="Enter name">
+          </div>
+          <div class="search-field">
+            <label for="search-email">Email</label>
+            <input type="email" id="search-email" name="search-email" placeholder="Enter an email">
+          </div>
+          <div class="category-select">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="all">All</option>
+              <option value="faculty">Faculty</option>
+              <option value="staff">Staff</option>
+            </select>
+          </div>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      function navigateToLogin() {
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

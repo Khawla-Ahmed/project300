@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty & Staff Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+       
+    <h1>Announcement Board</h1>
+  </header>
+
+  <nav>
+    <a href="index.html"><img src="./images/logo.png" alt="Metropolitan University Logo"></a>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="leaveform.html">Leave Request</a>
+      <button class="btnLogin-popup" onclick="navigateToLogin()">Logout</button>
+     </div>
+    </nav>
+    <section class="board">
+    <section class="announcements-board">
+      <h2>Latest Announcements</h2>
+      <ul id="announcement-list">
+        </ul>
+      </section>
+    </section>
+ 
+
+            <script>         
+            const announcementList = document.getElementById('announcement-list');
+
+// Replace with your actual data fetching logic (e.g., API call)
+const announcements = [
+  { title: "Faculty Development Workshop", date: "2024-05-23", content: "Join us for a workshop on..." },
+  { title: "Staff Appreciation Lunch", date: "2024-05-24", content: "Celebrate your hard work with a free lunch...",  },
+  { title: "New Policy on Leave Requests", date: "2024-05-28", content: "An updated policy for leave requests is now in effect..." },
+];
+
+function createAnnouncementItem(announcement) {
+  const item = document.createElement('li');
+  item.classList.add('announcement-item');
+
+  const iconSpan = document.createElement('span');
+  iconSpan.classList.add('icon');
+  if (announcement.icon) {
+    iconSpan.innerHTML = `<i class="${announcement.icon}"></i>`;
+  }
+  item.appendChild(iconSpan);
+
+
+  const titleLink = document.createElement('a');
+  titleLink.href = "#"; // Replace with actual link if needed
+  titleLink.textContent = announcement.title;
+  item.appendChild(titleLink);
+
+  const dateSpan = document.createElement('span');
+  dateSpan.classList.add('date');
+  dateSpan.textContent = announcement.date;
+  item.appendChild(dateSpan);
+
+  const contentPara = document.createElement('p');
+  contentPara.classList.add('content');
+  contentPara.textContent = announcement.content;
+  item.appendChild(contentPara);
+
+  return item;
+}
+
+announcements.forEach(announcement => {
+  const item = createAnnouncementItem(announcement);
+  announcementList.appendChild(item);
+  item.classList.add('new'); // Add class for animation (optional)
+});
+
+  </script>
+
+    </body>
+    </html>

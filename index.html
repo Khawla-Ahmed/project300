@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty & Staff Management System</title>
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@latest/dist/css/ionic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="#"><img src="./images/logo.png" alt="Metropolitan University Logo"></a>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="leaveform.html">Leave Request</a>
+
+   <button class="btnLogin-popup" onclick="navigateToLogin()">Logout</button>
+
+
+      
+     
+
+
+
+     </div>
+    </nav>
+
+    <!--home-->
+
+    <section id="home">
+      <h2>Welcome!</h2>
+      <p>This website provides a central hub for faculty and staff to access resources,
+         submit requests, and stay informed.</p>
+    </section>
+
+   
+
+<!--features-->
+
+<section>
+<div id="features">
+  <h1>Features Overview</h1>
+  <p>Streamline The Faculty & Staff Management</p>
+  <div class="fea-base">
+    <div class="fea-box">
+      <i class="fa-solid fa-chalkboard-user"></i>
+      <h3>Faculty and Staff Directory</h3>
+      <p>Discover our faculty & staff expertise.Find and connect directly with the dedicated team supporting our institution.</p>
+    </div>
+    <div class="fea-box">
+      <i class="fa-solid fa-bullhorn"></i>
+      <h3>Announcement Board</h3>
+      <p>Stay informed about important updates of Faculty & Staff Announcements.</p>
+    </div>
+    <div class="fea-box">
+      <i class="fa-brands fa-wpforms"></i>
+      <h3>Leave Request Form</h3>
+      <p>Streamline your leave request process electronically.</p>
+    </div>
+  </div>
+  </div>
+</section>
+   
+
+<!-- Departments -->
+
+<section>
+<div id="schools">
+  <p>Overview of our </p>
+  <h1>School of Excellence</h1>
+
+  <div class="school-box">
+    <div class="school">
+      <i class="fa-solid fa-gears"></i>
+      <h3>SCHOOL OF SCIENCE & TECHNOLOGY</h3>
+      <p>The School is a discipline devoted to the study and advancement of computational methods and data analysis techniques also provides computing resources for research.
+      </p>
+    </div>
+    <div class="school">
+      <i class="fa-solid fa-industry"></i>
+      <h3>SCHOOL OF BUSINESS & ECONOMICS</h3>
+      <p>The School was started in the year 2003 with 49 Students with the objective of giving quality education and to enable the student community.
+      </p>
+    </div>
+    <div class="school">
+      <i class="fa-solid fa-scale-balanced"></i>
+      <h3>SCHOOL OF LAW</h3>
+      <p>The School is focused on producing litigation specialists, corporate lawyers, mediation & arbitration experts, and professionals policy makers
+      </p>
+    </div>
+    <div class="school">
+      <i class="fa-solid fa-book-atlas"></i>
+      <h3>SCHOOL OF HUMANITIES & SOCIAL SCIENCES</h3>
+      <p>The School has been established to understand how societies function in local and global settings and learn about the forces and events shaping the world.
+      </p>
+    </div>
+</div>
+</section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="copyright">
+          <p> © 2024 All rights reserved | We4.</p>
+          
+        </div>
+        <div class="links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+          
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      function navigateToLogin() {
+       window.location.href = "login.html";
+     }
+     
+     // Event listener for the register link
+     document.getElementById("login-link").addEventListener("click", function(event) {
+       event.preventDefault(); // Prevent default link behavior
+       navigateToLogin(); // Call the navigation function
+     });
+
+
+     
+     </script>
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
